@@ -53,13 +53,79 @@ Create a structuring element (kernel) of suitable size.
 
 Compare the original, opened, and closed images.
 
-## Program
 
 ## Developed By
 
-**Name:** ____________________________
+**Name:INDHUJA.K**
 
-**Register No:** ______________________
+**Register No:212225040133** 
+
+
+## Program
+
+### Original Image
+
+```
+img = cv2.imread("flower.jpg")
+
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+plt.imshow(img_rgb)
+plt.title("Original Image")
+plt.axis("off")
+plt.show()
+```
+
+
+### Opening Operation
+
+```
+opening = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)
+
+opening_rgb = cv2.cvtColor(opening, cv2.COLOR_BGR2RGB)
+
+plt.imshow(opening_rgb)
+plt.title("Opening Image")
+plt.axis("off")
+plt.show()
+```
+
+### Closing Operation
+
+```
+closing = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)
+
+closing_rgb = cv2.cvtColor(closing, cv2.COLOR_BGR2RGB)
+
+plt.imshow(closing_rgb)
+plt.title("Closing Image")
+plt.axis("off")
+plt.show()
+```
+
+### Display All Images Together
+
+```
+plt.figure(figsize=(15,5))
+
+plt.subplot(1,3,1)
+plt.imshow(img_rgb)
+plt.title("Original Image")
+plt.axis("off")
+
+plt.subplot(1,3,2)
+plt.imshow(opening_rgb)
+plt.title("Opening Image")
+plt.axis("off")
+
+plt.subplot(1,3,3)
+plt.imshow(closing_rgb)
+plt.title("Closing Image")
+plt.axis("off")
+
+plt.show()
+```
+
 
 ## Output
 
@@ -67,6 +133,9 @@ Compare the original, opened, and closed images.
 
 - The input image is displayed.
 - The image serves as the source for morphological processing.
+
+<img width="487" height="507" alt="image" src="https://github.com/user-attachments/assets/48b79852-c34f-4d69-b431-5fdc0a448741" />
+
 
 ### Opening Operation
 
@@ -76,6 +145,8 @@ Compare the original, opened, and closed images.
 - Thin protrusions and isolated pixels are eliminated.
 - Object boundaries become smoother.
 
+<img width="480" height="500" alt="image" src="https://github.com/user-attachments/assets/7c35aaab-a9c2-457f-a86e-c5df070e85a1" />
+
 ### Closing Operation
 
 - Original image is displayed.
@@ -83,6 +154,12 @@ Compare the original, opened, and closed images.
 - Small holes and gaps inside objects are filled.
 - Broken regions are connected.
 - Object boundaries become more continuous.
+
+<img width="480" height="502" alt="image" src="https://github.com/user-attachments/assets/f9564b64-cb40-40c1-a0c4-3e2e184fd383" />
+
+### Display All Images Together
+
+<img width="1360" height="437" alt="image" src="https://github.com/user-attachments/assets/a5ece811-c4c7-4e51-9213-0bfc0d3a8e8d" />
 
 ## Applications
 
